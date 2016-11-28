@@ -1,4 +1,4 @@
-Difference between DateTime, TimeStamp, Time and Date
+﻿Difference between DateTime, TimeStamp, Time and Date in Rails
 
 Using MYSQL as Example
 
@@ -19,4 +19,44 @@ TIMESTAMP
 
 The TIMESTAMP data type is used for values that contain both date and time parts. It looks similar when you fetch it from the database. TIMESTAMP values are converted from the current time zone to UTC for storage, and converted back from UTC to the current time zone for retrieval(This occurs only for the TIMESTAMP data type, and not for other types such as DATETIME.).TIMESTAMP has a range of '1970-01-01 00:00:01' UTC to '2038-01-19 03:14:07' UTC and uses 4 bytes.
 
+Using Postgresql as Example
+
+DATE
+
+Simplified integer-based representation of a date defining only year, month, and day. 
+
+Example
+Description
+1999-01-08
+ISO 8601; January 8 in any mode (recommended format)
+January 8, 1999
+unambiguous in any datestyle input mode
+1/8/1999
+January 8 in MDY mode; August 1 in DMY mode
+1/18/1999
+January 18 in MDY mode; rejected in other modes
+01/02/03
+January 2, 2003 in MDY mode; February 1, 2003 in DMY mode; February 3, 2001 in YMD mode
+1999-Jan-08
+January 8 in any mode
+Jan-08-1999
+January 8 in any mode
+08-Jan-1999
+January 8 in any mode
+99-Jan-08
+January 8 in YMD mode, else error
+08-Jan-99
+January 8, except error in YMD mode
+Jan-08-99
+January 8, except error in YMD mode
+19990108
+ISO 8601; January 8, 1999 in any mode
+990108
+ISO 8601; January 8, 1999 in any mode
+1999.008
+year and day of year
+J2451187
+Julian day
+January 8, 99 BC
+year 99 BC
 
