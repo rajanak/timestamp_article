@@ -1,0 +1,22 @@
+Difference between DateTime, TimeStamp, Time and Date
+
+Using MYSQL as Example
+
+DATE 
+
+The DATE type is used for values with a date part but no time part. It retrieves and displays DATE values in 'YYYY-MM-DD' format. The supported range is'1000-01-01' to '9999-12-31'.
+
+
+TIME 
+
+TIME values in 'HH:MM:SS' format (or 'HHH:MM:SS' format for large hours values). TIME values may range from '-838:59:59'to '838:59:59'. The hours part may be so large because the TIME type can be used not only to represent a time of day (which must be less than 24 hours), but also elapsed time or a time interval between two events (which may be much greater than 24 hours, or even negative).
+
+DATETIME
+
+ The DATETIME type is used when you need values that contain both date and time. MySQL retrieves and displays DATETIME values as YYYY-MM-DD HH:MM:SS.DATETIME supports range is '1000-01-01 00:00:00' to '9999-12-31 23:59:59'. It stores every digit in the year, month day, hour, minute and second, and uses up a total of 8 bytes
+
+TIMESTAMP
+
+The TIMESTAMP data type is used for values that contain both date and time parts. It looks similar when you fetch it from the database. TIMESTAMP values are converted from the current time zone to UTC for storage, and converted back from UTC to the current time zone for retrieval(This occurs only for the TIMESTAMP data type, and not for other types such as DATETIME.).TIMESTAMP has a range of '1970-01-01 00:00:01' UTC to '2038-01-19 03:14:07' UTC and uses 4 bytes.
+
+
